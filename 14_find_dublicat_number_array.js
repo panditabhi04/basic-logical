@@ -1,5 +1,6 @@
 // const arr = [12, 11, 40, 12, 5, 6, 5, 12, 11, 23, 555, 55, 555, 55555, 55555, 123394, 89555];
 const arr=[1,2,3,3,4,5]
+let arr1=[]
 // const arr = [12, 11, 40, 12, 5, 6, 5];
 
 // let arr1 = []
@@ -23,24 +24,24 @@ const arr=[1,2,3,3,4,5]
 // remove dublicat value form array
 
 
-let i = 0;
+// let i = 0;
 
-for (let j = 1; j < arr.length; j++) {
-  if (arr[i] !== arr[j]) {
-    i++;
-    arr[i] = arr[j];
-  }
-}
+// for (let j = 1; j < arr.length; j++) {
+//   if (arr[i] !== arr[j]) {
+//     i++;
+//     arr[i] = arr[j];
+//   }
+// }  
 
-// manually print unique elements
-let result = [];
+// // manually print unique elements
+// let result = [];
 
-for (let k = 0; k <= i; k++) {
-  result.push(arr[k]);
-}
+// for (let k = 0; k <= i; k++) {
+//   result.push(arr[k]);
+// }
 
-console.log("New length:", i + 1);
-console.log("Modified array:", result);
+// console.log("New length:", i + 1);
+// console.log("Modified array:", result);
 
 // const users = [
 //   { id: 1, name: "Alice" },
@@ -61,9 +62,11 @@ console.log("Modified array:", result);
 //       }
 //       break;
 //     }
-//   }
+//   } 
 // }
 
 // console.log(arr2); 
+
+
 
 

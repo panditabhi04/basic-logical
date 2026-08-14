@@ -48,11 +48,6 @@ const fun = (str, i = 0) => {
 console.log("Answer : ", fun("mom"));   
 console.log("Answer : ", fun("hello")); 
 
-
-
-
-
-
 // Javascript_logic
 // var str = "Abhishek";
 // var str1 = "";
@@ -73,7 +68,6 @@ console.log("Answer : ", fun("hello"));
 var str = "mam";
 var n = 3
 // console.log("length",str.length);
-
 
 // const reversStr=str.split('').reverse().join('')
 // console.log("reversStr",reversStr);

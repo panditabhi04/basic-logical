@@ -33,8 +33,6 @@ for(let char in obj1){
     }
 }
 
-
-
 // const areAngram=(s1,s2)=>{
 //     if(s1.length != s2.length){
 //         console.log("Leath is not matched");

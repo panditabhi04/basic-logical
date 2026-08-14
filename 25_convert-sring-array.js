@@ -11,13 +11,11 @@ for (let i = 0; i <= str.length; i++) {
         // Add String Part
         str1 += str[i];
     }
-
     // 👇 handle last str1 when loop reaches end
     if (i === str.length - 1) {
         arr[arr.length] = str1;
     }
 }
-
 console.log(arr);
 // ["javascript", "is", "a", "scripting", "language"]
 

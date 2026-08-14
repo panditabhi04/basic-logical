@@ -1,0 +1,364 @@
+intro.
+hello sir/mam good morning/good evening/good afternoon. I am Abhishek Pandit.I have Completed my B.E form GTU.I have done my full stack web development course form bitcode. I have earned a 6 months internship from aved soft.
+I am working  in krtya tech. pvt limi. At krtya tech, I am working in their Product Membroz team. Membroz is discussing the software structure for a company that deals with business management.It stacks, like  Node Js , react and react native, mongodb. my mean teach is react js.
+
+Node.js:-
+Node.js is an open source environment which is run in chrome v8 engine. It uses JS as a server.
+Node js Advantages:-
+High performance
+Salibilty
+Easy to learn
+Reduce loading time
+Cost effective
+Increase response time
+Node js Disadvantages:-
+Callback Hell
+Single-threaded
+Asynchronous Programming
+Performance Bottlenecks
+Immature Tools
+
+How to Secure an API in Node.js 
+1  Use HTTPS instant HTTP
+encrypts data between client and server 
+2  Use JWT Authentication
+3  Validate input
+Prevent Attacks 
+4  Hash passwords
+convert plain passwords to hash password
+5  Use Helmet
+Secure HTTP Headers 
+6  Use Rate Limiting
+Stop Spam Requests 
+7  Store secrets in .env
+Hide Secrets 
+8  Handle errors properly 
+
+Router: 
+a mechanism that determines how an application responds to a client request for a specific endpoint (URI) and HTTP method (GET, POST, etc.) 
+Middleware:-
+Middleware is the function that has all access like req to the object,res to an object and moves to the next middleware in the function req -res cycle. 
+router.post("/login", login);
+Express js:-
+Express is a node js web application framework that provides features for building web and mobile applications.
+ It is used to build a single page, multipage, and hybrid web application.
+Node  js web server:-
+Node module:-
+A Node module in Node.js is a reusable block of JavaScript code that encapsulates specific functionality. cors , mongoess etc
+3) How do you handle asynchronous operations in Node.js?
+=> Asynchronous operations in Node.js are commonly handled using
+cache memory in Node.js  :- 
+Cache in Node.js is a technique to temporarily store frequently accessed data (in memory or tools like Redis) to reduce database load and improve API performance. 
+Indexing : -
+Indexing is a way to make data searching faster in a database. it is use creat using createIndex(). there 4 types of indexing  Single Field Index , Text Index , Unique Index ,  Compound Index 
+✅ 1. Single Field Index
+db.users.createIndex({ email: 1 })
+👉 Speeds up search by email
+
+✅ 2. Compound Index
+db.users.createIndex({ email: 1, age: -1 })
+👉 Used when querying multiple fields
+
+✅ 3. Unique Index
+db.users.createIndex({ email: 1 }, { unique: true })
+👉 Prevents duplicate values
+
+✅ 4. Text Index
+db.posts.createIndex({ title: "text" })
+👉 Used for search functionality
+
+What is WebSocket? 
+WebSocket allows two-way (bidirectional) communication where both client and server can send data anytime without closing the connection 
+
+
+how to websocket work
+create websocket :-
+using new websocket
+const ws = new WebSocket(`backendURL`);
+
+Connection Open 
+using onopen ()
+ws.onopen = () => {
+  ws.send(JSON.stringify({
+    type: "join-auctioner",
+    topic: `auction:${auctionId}`,
+    message: { user_id: userId },
+  }));
+};
+JSON.stringify() converts a JavaScript object into a JSON string 
+
+Data Transfer
+using onmessage() 
+ws.onmessage = (event) => {
+  const message = JSON.parse(event.data);
+
+
+Connection Close 
+using onclose()
+ws.onclose = () => {
+  console.log("Disconnected. Reconnecting...");
+};
+
+
+
+type of websoket:
+Native WebSocket
+WebSocket Libraries (Socket.IO)
+websocket is not store data it is a communication channel.
+
+
+
+Event Loop/How node js work:-
+Event loop is a mechanism for managing asynchronous operations and handling events.There are 4 main parts:
+→ Call Stack
+→ Web APIs / Node APIs
+→ Callback Queue
+→ Event Loop 
+
+4)  Explain the difference between setTimeout() and setInterval() functions in Node.js.
+setTimeOut:-executing function or piece of code ones  after specified time
+setInterval() :- executing function or piece of code specified intervals
+
+9) Explain the concept of blocking and non-blocking code in Node.js. How does it affect the performance of applications?
+=> blocking method executed synchrony and non-blocking method execute 
+asynchronously
+
+10) How would you handle file uploads in a Node.js application?
+=> Create an Upload Form
+
+=> Parse the Uploaded File
+
+=>save file
+
+
+
+Authentication :-
+
+Node.js authentication means verifying the identity of a user during the login process. There are two common methods: Session-based Authentication and Token-based Authentication (using JWT).
+Session-based Authentication :- Stores login info on the server 
+Token-based Authentication :- After login, the server sends a JWT token to the client and client store it in local storage or cookies.
+How to Implement Authentication in node
+express – Web framework
+
+
+jsonwebtoken – For creating and verifying tokens
+
+
+bcryptjs – Library  For hashing passwords
+
+
+mongoose – For MongoDB (if using a database)
+
+
+
+authorization :-
+authorization determines what actions a user is allowed to perform
+
+JWT:-
+JWT (JSON Web Tokens), is a popular and secure method for implementing authentication and authorization in Node.js applications.separated by dots (.). A JWT is dived in of three parts:
+Header → Stores the algorithm and token type.
+Payload → Stores the actual data (user information/claims).
+Signature → Verifies that the token is authentic and not modified.
+how to create jwt token
+
+ const token = jwt.sign(
+
+
+    { id: user._id },
+    process.env.JWT_SECRET,
+    { expiresIn: "1d" }
+  );
+
+bcryptjs
+Library used for hashing passwords
+One-way (cannot decrypt back)
+Used for authentication security
+decrypt (decryption)
+Used to convert encrypted data back to original
+Two-way process (encrypt ↔ decrypt)
+
+Fork in Node.js:-
+It is splitting of a single flow into two or multiple outgoing flow.
+
+Node.js is single threaded:-
+Node js runs in JS code in a single thread which means that code is to do only one task at a time.
+app.use(cors())
+Cors:-
+It stands for Cross-Origin Resource Sharing .A security feature that blocks web apps from talking to other domains.
+
+Exports:-
+Exports objects are use to exports function,object,pritimtv value from node js  module to Other files.
+Database calls
+API requests
+Heavy computations
+
+
+API integration:- 
+
+It is the process of connecting two or more applications or systems by using APIs (Application Programming Interfaces) to exchange data and perform actions.	
+   
+GET,POST,PUT,DELETE:-
+
+GET:- use when requests a representation of the specified resource.
+
+PUT:- A PUT request updates a record or creates it if it doesn't exist.
+
+POST:-  Use when you want to create a new resource or send data to the server. 
+
+DELETE:-HTTP DELETE method deletes the specified resource at the origin of the server.
+
+PATCH:- A PATCH request updates a specific part of a record without sending all the data. 
+
+PUT
+PATCH
+A PUT request updates a record or creates if it doesn't exist.
+A PATCH request updates a specific part of a record without sending all the data.
+
+
+It has High Bandwidth 
+ It has Low Bandwidth 
+ replacing an old document with a new one in a folder. If the document isn't there, it adds the new one to the folder.
+changing just the phone number on a contact card without updating the rest of the details.
+
+
+
+
+MongoDb:-
+Mongodb is a NOSQL database.the data store in a collection.it don't have rows and columns.it is stored in the form of an object.
+Mongodb vs sql
+
+SQL Databases
+NoSQL Databases
+Data Model: Relational (Tables with rows and columns)
+Data Model: Non-relational (Documents, Key-Value, Graphs)
+Schema: Predefined, rigid and fixed upfront
+Schema: Dynamic, flexible and schema-less
+Scaling: Vertical scaling (Add more power to one server)
+Scaling: Horizontal scaling (Add more servers to a cluster)
+Transactions: Strict ACID compliance (High integrity)
+Transactions: BASE principles (Eventual consistency)
+Queries: SQL with joins
+Queries: Object APIs / No joins
+Examples: PostgreSQL, MySQL, SQLite, Oracle
+Examples: MongoDB, Redis, Cassandra, Neo4j
+
+
+Mongoose:-
+Mongoose is a popular Node.js library that provides a higher-level abstraction over MongoDB, the NoSQL database. it provide schema, validation and powerful quring fetcher.
+
+Schema:-
+Mongoose schema is a blueprint of a mongodb collection. It represents the shape of the documents, specifying the fields and their data types, default values,and validation rules.
+const urlSchema = new mongoose.Schema(
+  {
+    fild_name:{
+}
+);
+
+
+
+Model:-
+A model is a wrapper for the schema. It provides an interface for interacting with the MongoDB collection.it  allows to create, read, update, and delete oprtion (CRUD) on documents.
+export default mongoose.model("collection_name", Schema);
+document in MongoDB:-
+A record in mongodb is document.the data structure compress of field and value pair.
+collection in MongoDB:-
+Mongodb store data record as document which is Collected together in collection
+query operators in MongoDB:-
+$en→ equal to
+$ne→ not equal to
+$gt→ greater then
+$gte→ greater then or equal to
+$it→ less then 
+$lte→ less then or equal to
+$in→ match value in array
+$nie→ not match value in array
+
+Insert
+db.collectionName.insertOne({ name: "John", age: 30 });
+db.collectionName.insertMany([{ name: "Alice", age: 25 }, { name: "Bob", age: 28 }]);
+
+Find:-
+// Find all documents
+db.collectionName.find();
+
+// Find documents with specific criteria
+db.collectionName.find({ name: "John" });
+
+// Find documents and project specific fields
+db.collectionName.find({ age: { $gt: 25 } }, { name: 1, _id: 0 });
+
+Aggregate 
+Update:-
+// Update a single document
+db.collectionName.updateOne({ name: "John" }, { $set: { age: 31 } });
+
+// Update multiple documents
+db.collectionName.updateMany({ age: { $lt: 30 } }, { $set: { status: "young" } });
+
+// Replace a document
+db.collectionName.replaceOne({ name: "John" }, { name: "John", age: 31, status: "updated" });
+
+Delete:-
+// Delete a single document
+db.collectionName.deleteOne({ name: "John" });
+
+// Delete multiple documents
+db.collectionName.deleteMany({ status: "inactive" });
+
+MongoDB Atlas:-
+MongoDB Atlas is a fully managed cloud database service provided by MongoDB
+
+
+
+
+Join in table:-
+Inner join
+Left outer join
+Right outer join
+Full outer join
+
+→ Inner join:-
+	Khali match data ave
+→ Left Outer Join
+	Join table ma left no bhag ave but right no bhag ni ave
+→Right outer Join
+	Join table ma right no bhag ave pan Left no bhag ni ave 
+→ Full outer join
+	Join table ma bdha data ave 
+
+How to get a value from 2 tables together:-
+Using $lookup
+$lookup:-
+It is an aggregation pipeline stage that allows you to perform a left outer join between two collections.
+
+db.collection.aggregate([
+{
+  $lookup:{
+		from:”foreignCollection”,--> order
+		localField:”localFieles”,--> 
+		forginField:”forginFiel”,
+		as:”outputArray”
+}
+}
+])
+
+$unwind:-
+$unwind is specifically designed to work with arrays, it will only "Unwind mongodb" array fields and generate new documents for each element of the array.
+
+ {
+ $unwind: "$customerDetails" // deconstruct the array to objects
+ },
+
+$project:-
+This stage chooses which fields to show in the output.it also rename field.it is using expression.
+$project: { 
+_id: 1, 
+orderNumber: 1,
+ total: 1,
+ 'customerDetails.name': 1, 
+'customerDetails.email': 1 
+}
+
+Aggregation Pipeline:-
+a specific flow of operations that processes, transforms, and returns results
+
